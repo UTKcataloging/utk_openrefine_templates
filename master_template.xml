@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modsCollection xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+    <mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+        <abstract>{{jsonize(cells["abstract"].value).replace('"', '')}}</abstract>
+        <abstract>{{jsonize(cells["abstract 1"].value).replace('"', '')}}</abstract>
+        <abstract>{{jsonize(cells["abstract 2"].value).replace('"', '')}}</abstract>
+        <relatedItem displayLabel="Collection" type="host">
+            <titleInfo>
+                <title>{{jsonize(cells["collection"].value).replace('"', '')}}</title>
+            </titleInfo>
+        </relatedItem>
+        <originInfo>
+            <dateIssued>{{jsonize(cells["date_publication"].value).replace('"', '')}}</dateIssued>
+            <dateCreated encoding="edtf" keyDate="yes" point="end">{{jsonize(cells["date_range_end"].value).replace('"', '')}}</dateCreated>
+            <!-- Skipped date_qualifier -->
+            <dateCreated encoding="edtf" keyDate="yes" point="start">{{jsonize(cells["date_range_start"].value).replace('"', '')}}</dateCreated>
+            <dateCreated encoding="edtf" keyDate="yes" point="start">{{jsonize(cells["date_single"].value).replace('"', '')}}</dateCreated>
+            <dateCreated>{{jsonize(cells["date_text"].value).replace('"', '')}}</dateCreated>
+            <dateCreated>{{jsonize(cells["date_text 1"].value).replace('"', '')}}</dateCreated>
+            <dateCreated>{{jsonize(cells["date_text 2"].value).replace('"', '')}}</dateCreated>
+            <dateCreated>{{jsonize(cells["date_text 3"].value).replace('"', '')}}</dateCreated>
+        </originInfo>
+    </mods>
+</modsCollection>
