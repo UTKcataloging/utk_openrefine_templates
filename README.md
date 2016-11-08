@@ -15,5 +15,8 @@ If either of these documents are updated, it is important to also update this do
 See the [General Refine Expression Language](https://github.com/OpenRefine/OpenRefine/wiki/General-Refine-Expression-Language)
 documentation for more information about GREL functions.
 
+## To Dos
 
-
+* Address XML comments.
+* Add generalized transform to remove blank nodes.
+* Complete master template.
