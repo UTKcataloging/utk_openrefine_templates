@@ -22,5 +22,13 @@
             <dateCreated>{{jsonize(cells["date_text 2"].value).replace('"', '')}}</dateCreated>
             <dateCreated>{{jsonize(cells["date_text 3"].value).replace('"', '')}}</dateCreated>
         </originInfo>
+        <form>
+            <digitalOrigin>{{jsonize(cells["digital_origin"].value).replace('"', '')}}</digitalOrigin>
+            <extent>{{jsonize(cells["extent"].value).replace('"', '')}}</extent>
+            {{if(isNonBlank(["form_authority"]), '<form authority="' + jsonize(cells["form_authority"].value).replace('"', '') + '">' + jsonize(cells["form"].value).replace('"', '') + "</form>", "<form>" + jsonize(cells["form"].value).replace('"', '') + "</form>")}}
+            {{if(isNonBlank(["form_authority 1"]), '<form authority="' + jsonize(cells["form_authority 1"].value).replace('"', '') + '">' + jsonize(cells["form 1"].value).replace('"', '') + "</form>", "<form>" + jsonize(cells["form 1"].value).replace('"', '') + "</form>")}}
+            {{if(isNonBlank(["form_authority 2"]), '<form authority="' + jsonize(cells["form_authority 2"].value).replace('"', '') + '">' + jsonize(cells["form 2"].value).replace('"', '') + "</form>", "<form>" + jsonize(cells["form 2"].value).replace('"', '') + "</form>")}}
+        </physicalDescription>
+        <identifier type="filename">{{jsonize(cells["identifier_file"].value).replace('"', '')}}</identifier>
     </mods>
 </modsCollection>
