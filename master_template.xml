@@ -30,5 +30,12 @@
             {{if(isNonBlank(["form_authority 2"]), '<form authority="' + jsonize(cells["form_authority 2"].value).replace('"', '') + '">' + jsonize(cells["form 2"].value).replace('"', '') + "</form>", "<form>" + jsonize(cells["form 2"].value).replace('"', '') + "</form>")}}
         </physicalDescription>
         <identifier type="filename">{{jsonize(cells["identifier_file"].value).replace('"', '')}}</identifier>
+        {{if(isNonBlank(["genre_authority"]), '<genre authority="' + jsonize(cells["genre_authority"].value).replace('"', '') + '">' + jsonize(cells["genre"].value).replace('"', '') + "</genre>", "<genre>" + jsonize(cells["genre"].value).replace('"', '') + "</genre>")}}
+        {{if(isNonBlank(["genre_authority 1"]), '<genre authority="' + jsonize(cells["genre_authority 1"].value).replace('"', '') + '">' + jsonize(cells["genre"].value).replace('"', '') + "</genre>", "<genre>" + jsonize(cells["genre"].value).replace('"', '') + "</genre>")}}
+        {{if(isNonBlank(["genre_authority 2"]), '<genre authority="' + jsonize(cells["genre_authority 2"].value).replace('"', '') + '">' + jsonize(cells["genre"].value).replace('"', '') + "</genre>", "<genre>" + jsonize(cells["genre"].value).replace('"', '') + "</genre>")}}
+        <!-- Skipped identifiers other than file name -->
+        <identifier type="opac">{{jsonize(cells["identifier_opac"].value).replace('"', '')}}</identifier>
+        <typeOfResource>{{jsonize(cells["item_type"].value).replace('"', '')}}</typeOfResource>
+        {{if(isNonBlank(["language"]), '<language><languageTerm type="code" authority="iso639-2b">' + jsonize(cells["language"].value).replace('"', '') + '</languageTerm>', "")}}
     </mods>
 </modsCollection>
