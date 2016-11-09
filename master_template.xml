@@ -37,5 +37,11 @@
         <identifier type="opac">{{jsonize(cells["identifier_opac"].value).replace('"', '')}}</identifier>
         <typeOfResource>{{jsonize(cells["item_type"].value).replace('"', '')}}</typeOfResource>
         {{if(isNonBlank(["language"]), '<language><languageTerm type="code" authority="iso639-2b">' + jsonize(cells["language"].value).replace('"', '') + '</languageTerm>', "")}}
+        {{if(isNonBlank(["language 1"]), '<language><languageTerm type="code" authority="iso639-2b">' + jsonize(cells["language 1"].value).replace('"', '') + '</languageTerm>', "")}}
+        {{if(isNonBlank(["language 2"]), '<language><languageTerm type="code" authority="iso639-2b">' + jsonize(cells["language 2"].value).replace('"', '') + '</languageTerm>', "")}}
+        <languageOfCataloging>
+            <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </languageOfCataloging>
+        {{if(isNonBlank(["name_authority"]), '<name authority="' + jsonize(cells["name_authority"].value).replace('"', '') + '"><namePart>' + jsonize(cells["name"].value).replace('"', '') + "</namePart><role><roleTerm>" + jsonize(cells["name_role"].value).replace('"', '') + "</roleTerm>, "")}}
     </mods>
 </modsCollection>
